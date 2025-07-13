@@ -1,14 +1,46 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
+  "config": [
+  {
+    "name": "find_products",
+    "description": "Search products by query and optional category.",
+    "tags": ["catalog", "search"],
+    "endpoint": "https://api.example.com/products/search",
+    "input_schema": {
+      "query": "string",
+      "category": "string?"
+    },
+    "output_schema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "price": { "type": "number" }
+        },
+        "required": ["id", "name"]
+      }
+    }
+  },
+  {
+    "name": "get_product_details",
+    "description": "Get detailed information about a product by ID.",
+    "tags": ["catalog", "details"],
+    "endpoint": "https://api.example.com/products/details",
+    "input_schema": {
+      "product_id": "integer"
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "in_stock": { "type": "boolean" }
+      },
+      "required": ["id", "name", "price", "in_stock"]
+    }
   }
+]
 }
