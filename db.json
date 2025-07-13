@@ -1,4 +1,5 @@
-[
+{
+  "config": [
   {
     "name": "find_products",
     "description": "Search products by query and optional category.",
@@ -42,3 +43,4 @@
     }
   }
 ]
+}
