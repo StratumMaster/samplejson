@@ -4,13 +4,13 @@
     "name": "find_products",
     "description": "Search products by query and optional category.",
     "tags": ["catalog", "search"],
-    "endpoint": "https://api.example.com/products/search",
+    "endpoint": "https://api.example.com/products/search"
   },
   {
     "name": "get_product_details",
     "description": "Get detailed information about a product by ID.",
     "tags": ["catalog", "details"],
-    "endpoint": "https://api.example.com/products/details",
+    "endpoint": "https://api.example.com/products/details"
   }
 ]
 }
